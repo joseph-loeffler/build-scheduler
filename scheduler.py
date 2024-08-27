@@ -177,12 +177,15 @@ def schedule_crews(crews, sites):
     site_idx = 0
     crew_idx = 0
 
-    while stack and counter < 2**27:  # if stack is empty, scheduling failed
+    while stack:  # if stack is empty, scheduling failed
+        if counter > 2**24:
+            # Just to see what it's like if it times out
+            return True
         counter += 1
         site = sites[site_idx]
         crew = crews[crew_idx]
         # print(f"(slot: {slot}, site_idx: {site_idx}, crew_idx: {crew_idx})")
-        if is_valid_assignment(crew, site, slot):
+        if is_valid_assignment(crew_idx, site_idx, slot, crews, sites):
 
             stack.append((slot, site_idx, crew_idx))
             site.current_schedule[slot] += 1
@@ -216,7 +219,7 @@ if __name__ == "__main__":
     crews = sort_crews_by_restrictions(CREWS)
     sites = sort_sites_by_availability(SERVICE_SITES)
 
-    headers = ["Crew", "Mon AM", "Mon PM", "Tue AM", "Tue PM", "Wed AM"]
+    headers = ["Crew #", "CLs", "Mon AM", "Mon PM", "Tue AM", "Tue PM", "Wed AM"]
     
     with open('schedule_output.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
@@ -224,22 +227,21 @@ if __name__ == "__main__":
         # Write the header row
         csv_writer.writerow(headers)
         
-        if first_fit(crews, sites):
-        # if schedule_crews(crews, sites):
+        # if first_fit(crews, sites):
+        if schedule_crews(crews, sites):
             # Write the data rows
-            for crew in CREWS:
+            crew_num = 1
+            for crew in crews:
                 # Create a row with the crew leader's name followed by their schedule
-                row = [crew.crew_leaders]
+                row = [crew_num, crew.crew_leaders]
                 # Extend the row with schedule entries corresponding to each header
-                for i in range(len(headers) - 1):
-                    # Assuming crew.schedule is a list of site indices or None
-                    # Adjust indexing to match your actual schedule structure
-                    if i < len(crew.schedule):
-                        site_idx = crew.schedule[i] if i < len(crew.schedule) else None
-                        row.append(sites[site_idx].site_name if site_idx else "Unassigned")
-                    else:
-                        row.append("Unassigned")
+                for time in range(LAST_SLOT + 1):
+                    site_idx = crew.schedule[time] if crew.schedule[time] is not None else None
+                    row.append(sites[site_idx].site_name if site_idx is not None else "Unassigned")
                 csv_writer.writerow(row)
             print("Scheduling successful! Results written to 'schedule_output.csv'.")
         else:
             print("Failed to find a valid schedule.")
+    
+    for crew in crews:
+        print(crew.schedule)
