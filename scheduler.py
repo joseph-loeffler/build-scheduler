@@ -169,8 +169,7 @@ def first_fit(crews, sites):
     return True  # Return true regardless of whether all constraints were met
 
 
-def schedule_crews(crews, sites):
-    counter = 0
+def brute_force(crews, sites):
     stack = [(None, None, None)]  # (slot, site_idx, crew_idx)
 
     slot = 0
@@ -178,10 +177,6 @@ def schedule_crews(crews, sites):
     crew_idx = 0
 
     while stack:  # if stack is empty, scheduling failed
-        if counter > 2**24:
-            # Just to see what it's like if it times out
-            return True
-        counter += 1
         site = sites[site_idx]
         crew = crews[crew_idx]
         # print(f"(slot: {slot}, site_idx: {site_idx}, crew_idx: {crew_idx})")
@@ -228,7 +223,7 @@ if __name__ == "__main__":
         csv_writer.writerow(headers)
         
         # if first_fit(crews, sites):
-        if schedule_crews(crews, sites):
+        if brute_force(crews, sites):
             # Write the data rows
             crew_num = 1
             for crew in crews:
@@ -242,6 +237,3 @@ if __name__ == "__main__":
             print("Scheduling successful! Results written to 'schedule_output.csv'.")
         else:
             print("Failed to find a valid schedule.")
-    
-    for crew in crews:
-        print(crew.schedule)
