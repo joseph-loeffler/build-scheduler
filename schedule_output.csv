@@ -1,17 +1,17 @@
 Crew #,CLs,Mon AM,Mon PM,Tue AM,Tue PM,Wed AM
-1,Andy & Morgan,Housing for New Hope,Museum of Life and Science (indoor),Reality Ministries (outdoor),Kramden Institute,W.G. Pearson Center
-1,Julia & Isabel,Children First,Bull City Woodshop,Duke Campus Farm,Special Olympics,W.G. Pearson Center
-1,Joe & Pallavi,Children First,Iglesia Emanuel,Duke Campus Farm,Museum of Life and Science (outdoor),Duke Lemur Center
-1,Adama & Kat,Duke Lemur Center,TROSA,SEEDS,Bull City Woodshop,Iglesia Emanuel
-1,Shivani & Oli,Iglesia Emanuel,TROSA,SEEDS,Durham Success Summit,Durham Central Park
-1,John & Laurin,Durham Central Park,TROSA,Children First,Durham Success Summit,Keep Durham Beautiful
-1,Ghina & Robbie,Durham Central Park,TROSA,Diaper Bank of NC,Iglesia Emanuel,Keep Durham Beautiful
-1,Sofia & Preston,Durham Parks & Recreation,Reality Ministries (indoor),Hub Farm,Scrap Exchange,Durham Central Park
-1,Naomi & Aiden,Durham Parks & Recreation,Reality Ministries (indoor),Diaper Bank of NC,Forest View Elementary School,Scrap Exchange
-1,Rachel & Nathan,Durham Parks & Recreation,Reality Ministries (indoor),Diaper Bank of NC,TROSA,Keep Durham Beautiful
-1,Jess & Eleanor,Durham Parks & Recreation,Forest View Elementary School,TROSA,Scrap Exchange,Hub Farm
-1,Ian & Lily,TROSA,Reality Ministries (indoor),Scrap Exchange,Forest View Elementary School,Keep Durham Beautiful
-1,Ben & Olivia,Durham Parks & Recreation,Reality Ministries (indoor),Scrap Exchange,Forest View Elementary School,Diaper Bank of NC
-1,Enoch & Molly,TROSA,Unassigned,Unassigned,Unassigned,Unassigned
-1,Ale & Dhruv,Unassigned,Unassigned,Unassigned,Unassigned,Unassigned
-1,Tiki & Ellen,Unassigned,Unassigned,Unassigned,Unassigned,Unassigned
+1,Andy & Morgan,Durham Parks & Recreation,Bull City Woodshop,Diaper Bank of NC,Scrap Exchange,Keep Durham Beautiful
+2,Julia & Isabel,Durham Parks & Recreation,TROSA,Duke Campus Farm,Forest View Elementary School,Diaper Bank of NC
+3,Joe & Pallavi,Durham Parks & Recreation,Duke Lemur Center,TROSA,Forest View Elementary School,Diaper Bank of NC
+4,Adama & Kat,Iglesia Emanuel,TROSA,Scrap Exchange,Durham Success Summit,Durham Central Park
+5,Shivani & Oli,Duke Lemur Center,Forest View Elementary School,Duke Campus Farm,TROSA,Scrap Exchange
+6,John & Laurin,Housing for New Hope,Museum of Life and Science (indoor),TROSA,Forest View Elementary School,Keep Durham Beautiful
+7,Ghina & Robbie,TROSA,Reality Ministries (indoor),Children First,Forest View Elementary School,Keep Durham Beautiful
+8,Sofia & Preston,Durham Central Park,Forest View Elementary School,TROSA,Scrap Exchange,Iglesia Emanuel
+9,Naomi & Aiden,Durham Central Park,Reality Ministries (indoor),Reality Ministries (outdoor),TROSA,Diaper Bank of NC
+10,Rachel & Nathan,Durham Parks & Recreation,TROSA,Hub Farm,Kramden Institute,Durham Central Park
+11,Jess & Eleanor,TROSA,Reality Ministries (indoor),Scrap Exchange,Special Olympics,Hub Farm
+12,Ian & Lily,TROSA,Forest View Elementary School,SEEDS,Durham Success Summit,W.G. Pearson Center
+13,Ben & Olivia,Children First,TROSA,Diaper Bank of NC,Bull City Woodshop,Keep Durham Beautiful
+14,Enoch & Molly,Children First,Iglesia Emanuel,SEEDS,TROSA,Scrap Exchange
+15,Ale & Dhruv,TROSA,Reality Ministries (indoor),Diaper Bank of NC,Museum of Life and Science (outdoor),W.G. Pearson Center
+16,Tiki & Ellen,Durham Parks & Recreation,Reality Ministries (indoor),TROSA,Iglesia Emanuel,Duke Lemur Center
